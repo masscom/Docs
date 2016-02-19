@@ -106,31 +106,7 @@ author = 'MASS'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-# This allows sphinx_rtd_theme to work locally
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-html_context = {
-    'on_rtd' : on_rtd
-}
-
-if not on_rtd:
-    import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-else:
-    extensions.append('yasfb')
-    feed_num_items = 15
-    feed_skip_regex = '(.)*index'
-    feed_base_url = 'http://masscomdocs.readthedocs.org/en/latest'
-    feed_description = 'Documentation'
-    feed_author = 'MASS Labs'
-
-def setup(app):
-    app.add_stylesheet('custom.css?v=4')
-    app.add_javascript('helpfulness.js?v=4')
-    app.add_javascript('disqus.js')
-    if on_rtd:
-        app.add_javascript('wedc.js?v=4')
 
 #html_theme = 'default'
 
@@ -170,7 +146,7 @@ def setup(app):
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-html_last_updated_fmt = '%b %d, %Y'
+
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -210,29 +186,16 @@ html_last_updated_fmt = '%b %d, %Y'
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'masscom'
+
 
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
-}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-  ('index', 'Documentation',
-   'MASS Labs', 'manual'),
-]
+
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -259,10 +222,6 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    ('index', 'Documentation',
-     ['MASS Labs'], 1)
-]
 
 # If true, show URL addresses after external links.
 #man_show_urls = False
@@ -273,11 +232,7 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-  ('index', 'Documentation',
-   'MASS Labs', 'Documentation',
-   '.NET Development'),
-]
+
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []
@@ -294,10 +249,7 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = project
-epub_author = author
-epub_publisher = author
-epub_copyright = copyright
+
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = project
