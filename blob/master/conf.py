@@ -29,9 +29,9 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinxcontrib.dotnetdomain']
+#extensions = [
+#    'sphinx.ext.intersphinx',
+#    'sphinxcontrib.dotnetdomain']
 
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates', '../common/_templates']
@@ -71,7 +71,7 @@ author = 'MASS'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build','sample/*','samples/*']
+#exclude_patterns = ['_build','sample/*','samples/*']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -89,7 +89,7 @@ exclude_patterns = ['_build','sample/*','samples/*']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+#pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -337,7 +337,7 @@ epub_copyright = copyright
 #epub_post_files = []
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
+#epub_exclude_files = ['search.html']
 
 # The depth of the table of contents in toc.ncx.
 #epub_tocdepth = 3
@@ -362,6 +362,6 @@ epub_exclude_files = ['search.html']
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {
-    'dotnet': ('http://masscomdocs.readthedocs.org/en/latest', '../common/dotnet.inv'),
-}
+#intersphinx_mapping = {
+#    'dotnet': ('http://masscomdocs.readthedocs.org/en/latest', '../common/dotnet.inv'),
+#}
